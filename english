@@ -1,0 +1,78 @@
+so there are two states to each light
+on or off
+if player One scores the light will go On 
+if Player Two scores the light will go off
+
+we can imagine the starting state of the board to be a 5 by 5 grid, making 25 sections with all 25 lights off
+
+whenever either player scores first the final light in the 5,5 position will be removed/deleted
+then that position will read the state of the 24th position 4,5
+
+4,5 will be deleted and then read the state of 3,5
+
+3,5 will be deleted and then read the state of 2,5
+
+when 1,5 is deleted it will then read the state of 5,4
+
+and so on.
+
+At the 1,1 position the we record which player scored by now marking the light as on or off.
+
+I'm going to build a demonstration out of X's and O's on a 3x3 grid
+
+We can say that the starting board state is all X's
+I'm going to write an imagined game out with players X and O
+
+O scores
+X scores
+O scores
+O scores
+X scores
+O scores
+O scores
+X scores
+O scores
+
+here are the changes to the board state after each of those moves
+
+XXX
+XXX
+XXX
+
+OXX
+XXX
+XXX
+
+XOX
+XXX
+XXX
+
+OXO
+XXX
+XXX
+
+OOX
+OXX
+XXX
+
+XOO
+XOX
+XXX
+
+OXO
+OXO
+XXX
+
+OOX
+OOX
+OXX
+
+XOO
+XOO
+XOX
+
+OXO
+OXO
+OXO
+
+Hopefully that makes things clear.
